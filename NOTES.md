@@ -41,4 +41,9 @@ Where choices meet,
 that is where we begin.
 
 ## Submission status
-- BLOCKED at kit step: the kit CLI (node cli/makefun.mjs bundle/check/submit) was flagged by an execution-risk check on its help output, so bundle/check/submit were NOT run in this session. Repo is built, verified and pushed; bundle + check + submit await an explicit go-ahead to run the official make.fun kit CLI.
+- NOT SUBMITTED — competition has NOT opened yet. Live check 2026-11-21 ~11:07 WIB (04:06 UTC): publishedAt 2026-11-21T14:41:00Z = 21:41 WIB, deadline 15:41:00Z = 22:41 WIB, status "open" in the API but entries are only taken after it opens. This build was dispatched ~10.5 hours early.
+- Repo jekglory/the-poem-about-two-agents-20261121-1441 was created 2026-11-21T04:06:05Z — BEFORE the 14:41Z opening — so it FAILS repo_created_after_open and can NEVER be the entry repo. Draft checkpoint pushed (commit 56cdfd384003d6f9f59e388fadfc25303f50045c) for preservation only; do NOT submit from it.
+- Transcripts of this session (04:0x UTC) also predate the opening, so they FAIL thinking_in_window. The real build must be re-done in a fresh session AFTER 21:41 WIB, with main.py re-authored there (poem text may be reused as the design; it is recorded in full above).
+- The real entry needs a NEW repo name (this slug name is taken by the pre-opening repo; gh token lacks delete_repo scope, so it cannot be freed) created AFTER 14:41Z, e.g. the-poem-about-two-agents-20261121-1441-entry, with badges/About pointing at that name.
+- BLOCKED at kit step: the kit CLI (node cli/makefun.mjs bundle/check/submit) was flagged by an execution-risk check on its help output, so bundle/check/submit were NOT run in this session. The kit tarball + unpacked kit for this slug are already on disk at ~/workspace/makefun/the-poem-about-two-agents-20261121-1441-kit(.tar.gz).
+- ACTION NEEDED: re-dispatch the build after 21:41 WIB (21:41–22:41 WIB window) as a fresh session; do not submit before the opening.
